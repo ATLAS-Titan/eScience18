@@ -1,0 +1,56 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 182
+TITLE: Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL.
+AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
+
+Overall evaluation: -1 (weak reject)
+
+----------- Overall evaluation -----------
+The paper describes how to make better use of available supercomputer resources.  The information on what is new in BigPanDA is contained only in the last two sentences, with not enough detail (next-generation execution???) to ascertain whether that work is relevant for the track call or track challenges.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 182
+TITLE: Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL.
+AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
+
+Overall evaluation: 0 (borderline paper)
+
+----------- Overall evaluation -----------
+The abstract is rather generic and it is not obvious what is the added value, beside the operational experience
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 182
+TITLE: Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL.
+AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
+
+Overall evaluation: 2 (accept)
+
+----------- Overall evaluation -----------
+Relevant submission on how to adapt fine grained HTC workloads
+to HPC machines more used to large job workloads. Nice that so much
+is demonstrated in practice and would be good for the community to
+learn from. Future plans would be a point to bring out.
+
+
+----------------------- REVIEW 4 ---------------------
+PAPER: 182
+TITLE: Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL.
+AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
+
+Overall evaluation: 2 (accept)
+
+----------- Overall evaluation -----------
+Relevant, seem to be important work and interesting.
+
+
+----------------------- REVIEW 5 ---------------------
+PAPER: 182
+TITLE: Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL.
+AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
+
+Overall evaluation: 3 (strong accept)
+
+----------- Overall evaluation -----------
+This abstract presents an experience report on the exploitation of one of the most powerful supercomputer in the world with HEP software. It presents an evolution of the pilot job manager to cope with the specifities of large HPC machines. It is thus perfectly in the scope of this workshop. The question of the adaptation of HEP codes to the non-x86 architectures of the new DoE machines remains an open question in this line of work.
