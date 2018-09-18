@@ -15,41 +15,51 @@
 \title{Towards Exascale Computing for High Energy Physics: The ATLAS Experience at ORNL}
 
 
-\author{\IEEEauthorblockN{V Ananthraj\IEEEauthorrefmark{3}, K De\IEEEauthorrefmark{1}, S Jha\IEEEauthorrefmark{2}\IEEEauthorrefmark{5}, 
-A Klimentov\IEEEauthorrefmark{2}, D Oleynik\IEEEauthorrefmark{1}, S Oral\IEEEauthorrefmark{3}, A Merzky\IEEEauthorrefmark{5}, \\ R Mashinistov\IEEEauthorrefmark{2}, S Panitkin\IEEEauthorrefmark{2}, P Svirin\IEEEauthorrefmark{2}, M Turilli\IEEEauthorrefmark{5}, J Wells\IEEEauthorrefmark{3}, S Wilkinson\IEEEauthorrefmark{1}
+\author{\IEEEauthorblockN{V Ananthraj\IEEEauthorrefmark{1}, K De\IEEEauthorrefmark{2}, S Jha\IEEEauthorrefmark{3}\IEEEauthorrefmark{4},
+A Klimentov\IEEEauthorrefmark{4}, D Oleynik\IEEEauthorrefmark{2}, S Oral\IEEEauthorrefmark{1}, A Merzky\IEEEauthorrefmark{3}, \\ R Mashinistov\IEEEauthorrefmark{4}, S Panitkin\IEEEauthorrefmark{4}, P Svirin\IEEEauthorrefmark{4}, M Turilli\IEEEauthorrefmark{3}, J Wells\IEEEauthorrefmark{1}, S Wilkinson\IEEEauthorrefmark{2}
+}\\
+
+\IEEEauthorblockA{\IEEEauthorrefmark{1}OLCF, Oak Ridge National Laboratory, Oak Ridge, TN, USA}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Physics, University of Texas, Arlington, TX, USA}
+\IEEEauthorblockA{\IEEEauthorrefmark{3}Department of Electrical and Computer Engineering, Rutgers University, Piscataway, NJ, USA}
+\IEEEauthorblockA{\IEEEauthorrefmark{4}Department of Physics, Brookhaven National Laboratory, Upton, NY, USA}
 }
-
-\IEEEauthorblockA{\IEEEauthorrefmark{1}University of Texas, Arlington}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}Brookhaven National Laboratory, Upton, NY, USA}
-\IEEEauthorblockA{\IEEEauthorrefmark{3}Oak Ridge National Laboratory, Oak Ridge, TN, USA}
-\IEEEauthorblockA{\IEEEauthorrefmark{4}University of Texas at Arlington, Arlington, TX, USA}
-\IEEEauthorblockA{\IEEEauthorrefmark{5}Rutgers University, Piscataway, NJ, USA}}
-
 
 \maketitle
 
 \begin{abstract}
 
 
-Traditionally, the ATLAS experiment at LHC has utilized distributed resources as provided by the WLCG to support data distribution and enable the simulation of events.  For example, the ATLAS experiment uses a geographically distributed grid of approximately 200,000 cores continuously (250 000 cores at peak), (over 1,000 million core-hours per year) to process, simulate, and analyze its data (today’s total data volume of ATLAS is more than 300 PB). After the early success in discovering a new particle consistent with the long-awaited Higgs boson, ATLAS is starting the precision measurements necessary for further discoveries that will become possible by much higher LHC collision energy and rates from Run2. The need for simulation and analysis will overwhelm the expected capacity of WLCG computing facilities unless the range and precision of physics studies will be curtailed. 
+Traditionally, the ATLAS experiment at LHC has utilized distributed resources as provided by the WLCG to support data distribution and enable the simulation of events.  For example, the ATLAS experiment uses a geographically distributed grid of approximately 200,000 cores continuously (250 000 cores at peak), (over 1,000 million core-hours per year) to process, simulate, and analyze its data (today’s total data volume of ATLAS is more than 300 PB). After the early success in discovering a new particle consistent with the long-awaited Higgs boson, ATLAS is starting the precision measurements necessary for further discoveries that will become possible by much higher LHC collision energy and rates from Run2. The need for simulation and analysis will overwhelm the expected capacity of WLCG computing facilities unless the range and precision of physics studies will be curtailed.
 
-Over the past few years, the ATLAS experiment has been investigating the implications of using high-performance computers -- such as those found at Oak Ridge leadership class facility (ORNL). This steady transition is a consequence of application requirements (e.g., greater than expected data production), technology trends and software complexity.  Specifically, the DOE ASCR and HEP funded the BigPanDA project provided the first important demonstration of the capabilities that a workload management system (WMS) can have on improving the uptake and utilization of supercomputers from both application and systems points of view. 
+Over the past few years, the ATLAS experiment has been investigating the implications of using high-performance computers -- such as those found at Oak Ridge leadership class facility (OLCF). This steady transition is a consequence of application requirements (e.g., greater than expected data production), technology trends and software complexity.  Specifically, the DOE ASCR and HEP funded the BigPanDA project provided the first important demonstration of the capabilities that a workload management system (WMS) can have on improving the uptake and utilization of supercomputers from both application and systems points of view.
 
-We quantify the impact of this sustained and steady uptake of supercomputers via BigPanDA: For the latest 18-month period for which data is available, Big Panda has enabled the utilization of ~400 Million Titan core hours (primarily via Backfill mechanisms 275M, but also through regular “front end” submission as part of the ALCC project 125M). This non-trivial amount of 400 million Titan core hours has resulted in 920 million events being analyzed. ~3-5\% of all of ATLAS compute resources now provided by Titan; other DOE supercomputers provide non-trivial compute allocations.
+We quantify the impact of this sustained and steady uptake of supercomputers via BigPanDA: For the latest 18-month period for which data is available, Big Panda has enabled the utilization of ~400 Million Titan core hours (primarily via Backfill mechanisms 275M, but also through regular “front end” submission as part of the ALCC project 125M). This non-trivial amount of 400 million Titan core hours has resulted in 920 million events being analyzed. ~3-5\% of all of ATLAS compute resources now provided by Titan; other DOE supercomputers also provide significant compute allocations.
 
 In spite of these impressive numbers, there is a need to further improve the uptake and utilization of supercomputing resources to improve the ATLAS prospects for Run 3. In this short paper, we will outline how we have steadily made the ATLAS project ready for the exascale era.
 
-Our approach to the exascale involve the BigPanDA workload management system
-which is responsible for coordination of tasks, orchestration of resources and
+Our approach to the exascale involve the BigPanDA workload management system.
+BigPanDA is responsible for coordination of tasks, orchestration of resources and
 job submission and management. Historically, BigPanDA was used to for workload
-management across multiple distributed resources on the WLCG. We describe the
-changes to the BigPanDA software system needed to enable BigPanDA to utilize
-Titan. We will then describe how architectural, algorithmic and software
-changes have also been addressed by ATLAS computing. These enhancements
-include experiments with new modes of resource federation (harvestor), task
+management across multiple distributed resources on the WLCG. 
+We describe the changes to the BigPanDA software system needed to enable it to utilize
+Titan supercomputer. 
+These enhancements include development of the new modes of resource federation (Harvester), task
 execution systems (next-generation execution) as well as new applications and
-communities. We will conclude with ongoing and future improvements to BigPanda
-to make it ready for the pre-exascale machines such as Summit (ORNL).
+communities. 
+
+Harvester is intended to operate as a universal resource-facing service in BigPanDA,
+capable of working with different types of computing resources - Grid sites, clouds and supercomputers.
+Harvester provides for flexible scheduling of  job execution and asynchronous data transfer to and from the controlled resource.
+
+NGE is a prototype of a pilot system capable of running on Titan and other HPC machines.
+NGE allows to run multiple generations of heterogeneous workloads during task time allocation which helps to increase resource utilization efficiency.
+
+We will then describe how architectural, algorithmic and software
+changes have also been addressed by ATLAS computing.
+In particular we will describe adaptation of HEP codes to the non-x86 architecture of the Summit supercomputer at ORNL.
+We will conclude with ongoing and future improvements to BigPanDA
+to make it ready for the pre-exascale machines such as Summit.
 
 
 
