@@ -6,7 +6,12 @@ AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
 Overall evaluation: -1 (weak reject)
 
 ----------- Overall evaluation -----------
-The paper describes how to make better use of available supercomputer resources.  The information on what is new in BigPanDA is contained only in the last two sentences, with not enough detail (next-generation execution???) to ascertain whether that work is relevant for the track call or track challenges.
+
+The paper describes how to make better use of available supercomputer
+resources.  The information on what is new in BigPanDA is contained only in
+the last two sentences, with not enough detail (next-generation execution???)
+to ascertain whether that work is relevant for the track call or track
+challenges.
 
 
 ----------------------- REVIEW 2 ---------------------
@@ -17,6 +22,7 @@ AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
 Overall evaluation: 0 (borderline paper)
 
 ----------- Overall evaluation -----------
+
 The abstract is rather generic and it is not obvious what is the added value, beside the operational experience
 
 
@@ -28,6 +34,7 @@ AUTHORS: Shantenu Jha, Jack Wells, Alexei Klimentov and Sergey Panitkin
 Overall evaluation: 2 (accept)
 
 ----------- Overall evaluation -----------
+
 Relevant submission on how to adapt fine grained HTC workloads
 to HPC machines more used to large job workloads. Nice that so much
 is demonstrated in practice and would be good for the community to
